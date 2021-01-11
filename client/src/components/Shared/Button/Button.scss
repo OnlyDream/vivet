@@ -1,0 +1,28 @@
+@import "../../../assets/scss/abstracts/variables";
+@import "../../../assets/scss/abstracts/mixins";
+
+.button {
+    border: none;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+    padding: 6px;
+    width: 100px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    &--primary {
+        background-color: $main-color;
+        color: $main-dark;
+        &:hover {
+            background-color: $main-dark;
+            color: $main-color;
+            border: 1px solid $main-color;
+        }
+    }
+    &--secondary {
+        background-color: $main-dark;
+        color: $main-color;
+    }
+    &:focus {
+        outline: none;
+    }
+}

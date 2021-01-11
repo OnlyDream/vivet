@@ -1,0 +1,35 @@
+@import "../../../assets/scss/abstracts/variables";
+@import "../../../assets/scss/abstracts/mixins";
+
+.search-bar {
+    background: $main-light-dark;
+    border: none;
+    text-indent: 10px;
+    padding: 5px;
+    border: 1px solid $main-light-dark;
+    transition: all 250ms ease-in-out;
+    border-radius: 6px;
+    position: relative;
+    @include d-flex();
+    &__input {
+        width: 100%;
+        background-color: inherit;
+        border: none;
+        &:focus {
+            outline: none;
+        }
+    }
+    &__icon {
+        position: absolute;
+        right: 10px;
+        opacity: 0;
+        transition: all 250ms ease-in-out;
+        &--focus {
+            opacity: 1;
+        }
+    }
+    &--focus {
+        outline: none;
+        border: 1px solid $main-color;
+    }
+}
